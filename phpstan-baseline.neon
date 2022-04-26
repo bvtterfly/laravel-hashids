@@ -1,0 +1,10 @@
+parameters:
+	ignoreErrors:
+		-
+			message: "#^Unsafe usage of new static\\(\\)\\.$#"
+			count: 3
+			path: src/Exceptions/InvalidOption.php
+		-
+			message: "#^Unsafe usage of new static\\(\\)\\.$#"
+			count: 1
+			path: src/HashIdOptions.php
