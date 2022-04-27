@@ -174,6 +174,31 @@ public function getHashIdOptions(): HashIdOptions
 }
 ```
 
+### Using Hashids in routes
+
+To use the hashids in routes, you may specify the hashid column in the route parameter definition:
+
+```php
+use App\Models\Post;
+ 
+Route::get('/posts/{post:hashid}', function (Post $post) {
+    return $post;
+});
+```
+or If you would like model binding to always use the hashid column other than id when retrieving a given model class, you may override the getRouteKeyName method on the Eloquent model:
+
+```php
+/**
+ * Get the route key for the model.
+ *
+ * @return string
+ */
+public function getRouteKeyName()
+{
+    return 'hashid';
+}
+```
+
 
 ## Testing
 
