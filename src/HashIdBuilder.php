@@ -6,7 +6,6 @@ use Hashids\Hashids;
 
 class HashIdBuilder
 {
-
     public static function build(HashIdOptions $options): Hashids
     {
         return new Hashids(
