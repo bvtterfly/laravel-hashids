@@ -20,7 +20,7 @@ beforeEach(function () {
 
 it('can generate hash id for incrementing model', function () {
     $model = new AutoIncrementModel();
-    $generator = new Hashids('test:'.get_class($model));
+    $generator = new Hashids('test:' . $model->getTable());
     $model->save(['id' => 1]);
     expect($model)->getSaved()->toBeTrue();
     expect($model)->getUpdated()->toBeTrue();
@@ -35,7 +35,7 @@ it('can generate hash id for incrementing model', function () {
 
 it('can generate hash id with specific minimum length', function () {
     $model = new AutoIncrementModel2();
-    $generator = new Hashids('test:'.get_class($model), 5);
+    $generator = new Hashids('test:' . $model->getTable(), 5);
     $model->save(['id' => 1]);
     expect($model)->getSaved()->toBeTrue();
     expect($model)->getUpdated()->toBeTrue();
@@ -78,7 +78,7 @@ it('should throw invalid option if type is not equal to "int" or "hex"', functio
 it('can generate hash id for model with hex type', function () {
     $model = new HexTypeModel();
     $model->id = 1;
-    $generator = new Hashids('test:'.get_class($model));
+    $generator = new Hashids('test:' . $model->getTable());
     $model->save();
     expect($model)->getSaved()->toBeTrue();
     expect($model)->getUpdated()->toBeFalse();
@@ -95,7 +95,7 @@ it('can generate hash id for model with hex type', function () {
 it('can generate hash id for model with custom key', function () {
     $model = new CustomFromKeyModel();
     $model->_id = 100;
-    $generator = new Hashids('test:'.get_class($model));
+    $generator = new Hashids('test:' . $model->getTable());
     $model->save();
     expect($model)->getSaved()->toBeTrue();
     expect($model)->getUpdated()->toBeFalse();

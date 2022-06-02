@@ -133,7 +133,7 @@ public function getHashIdOptions(): HashIdOptions
 
 ### Use the same hashids among models
 
-The package will add the models' class to the default salt to generate a unique output id per model. If you want your `Post` and `User` models to share the same output id when `id = 1`:
+The package will add the models' table to the default salt to generate a unique output id per model. If you want your `Post` and `User` models to share the same output id when `id = 1`:
 
 ```php
 public function getHashIdOptions(): HashIdOptions
