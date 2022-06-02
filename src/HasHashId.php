@@ -16,7 +16,7 @@ trait HasHashId
     {
         static::created(function (Model $model) {
             $model->generateHashIdOnCreatedEvent();
-            $model->save();
+            $model->saveQuietly();
         });
         static::creating(function (Model $model) {
             $model->generateHashIdOnCreatingEvent();
