@@ -1,8 +1,8 @@
 # Laravel Hashids
 
 [![Latest Version on Packagist](https://img.shields.io/packagist/v/bvtterfly/laravel-hashids.svg?style=flat-square)](https://packagist.org/packages/bvtterfly/laravel-hashids)
-[![GitHub Tests Action Status](https://img.shields.io/github/workflow/status/bvtterfly/laravel-hashids/run-tests?label=tests)](https://github.com/bvtterfly/laravel-hashids/actions?query=workflow%3Arun-tests+branch%3Amain)
-[![GitHub Code Style Action Status](https://img.shields.io/github/workflow/status/bvtterfly/laravel-hashids/Check%20&%20fix%20styling?label=code%20style)](https://github.com/bvtterfly/laravel-hashids/actions?query=workflow%3A"Check+%26+fix+styling"+branch%3Amain)
+[![run-tests](https://github.com/bvtterfly/laravel-hashids/actions/workflows/run-tests.yml/badge.svg)](https://github.com/bvtterfly/laravel-hashids/actions/workflows/run-tests.yml)
+[![Check & fix styling](https://github.com/bvtterfly/laravel-hashids/actions/workflows/php-cs-fixer.yml/badge.svg)](https://github.com/bvtterfly/laravel-hashids/actions/workflows/php-cs-fixer.yml)
 [![Total Downloads](https://img.shields.io/packagist/dt/bvtterfly/laravel-hashids.svg?style=flat-square)](https://packagist.org/packages/bvtterfly/laravel-hashids)
 
 This package provides a trait that will generate hashids when saving any Eloquent model.
